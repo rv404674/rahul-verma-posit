@@ -28,15 +28,19 @@ void filldata(string owner)
 
 class Owner
 {
-	
-	
-	
+	string ownerName;
+	public :
+	Owner(string s)
+	{
+		ownerName = s;
+	}
 }
 
-class Record
+// Each Record is associate with a Owner. So use inheritance
+class Record : public Owner
 {
 	list *Node record;
-	int data;
+	float data;
 	
 	public :
 	Record(int d)
@@ -57,10 +61,6 @@ class Record
 	
 }
 
-class Record
-{
-	
-}
 
 int main() {
 	// your code goes here
@@ -88,7 +88,7 @@ int main() {
 			
 			
 			case 3:
-			cout<<"exitind the program - BYE :) \n";
+			cout<<"exiting the program - BYE :) \n";
 			
 			
 			
